@@ -1,8 +1,4 @@
 # actives
-## counter example, reactjs view.
-
-
-## Example
 There is an example with reactjs view.
 
 There are some required packages.
