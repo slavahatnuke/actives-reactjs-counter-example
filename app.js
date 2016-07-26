@@ -31,7 +31,7 @@ let box = new Box;
 box.add('counter', Counter);
 
 // connect state to the counter
-box.connect('state', 'counter')
+box.connect('counterState', 'counter')
     .state(({counter}) => {
         return {
             counter: counter.get()
@@ -44,7 +44,7 @@ box.connect('state', 'counter')
     });
 
 // connect state with view, view should not know about real logic
-let CounterWidget = connect(box.state)(CounterView);
+let CounterWidget = connect(box.counterState)(CounterView);
 
 // render widget now it's connected to state and will react on changes.
 render(<CounterWidget />, document.getElementById('app'));
