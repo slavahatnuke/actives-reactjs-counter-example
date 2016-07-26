@@ -46,4 +46,5 @@ box.connect('state', 'counter')
 // connect state with view, view should not know about real logic
 let CounterWidget = connect(box.state)(CounterView);
 
+// render widget not it's connected to state and will react on changes.
 render(<CounterWidget />, document.getElementById('app'));
