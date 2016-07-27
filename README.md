@@ -62,13 +62,18 @@ let CounterWidget = connect(box.counterState)(CounterView);
 // render widget now it's connected to state and will react on changes.
 render(<CounterWidget />, document.getElementById('app'));
 ```
-you can manipulate with `counter` now and it will present view
+
+You can manipulate `counter` (logic instance) now and it will present view
 ```javascript
-// you can manipulate `counter`
+
 let counter = box.counter;
 setInterval(() => counter.up(), 1000);
 ```
 
+### How to start
+- `npm install`
+- `npm start`
+- `http://localhost:8080/` [http://localhost:8080/](http://localhost:8080/)
 
 ### actives
 The main idea of [actives](https://github.com/slavahatnuke/actives)
