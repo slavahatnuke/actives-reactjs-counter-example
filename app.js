@@ -8,6 +8,11 @@ import connect from 'actives-react';
 class Counter {
     constructor() {
         this.counter = 0;
+
+    }
+
+    go() {
+        setInterval(() => this.up(), 100);
     }
 
     up() {
@@ -49,7 +54,6 @@ let CounterWidget = connect(box.counterState)(CounterView);
 // render widget now it's connected to state and will react on changes.
 render(<CounterWidget />, document.getElementById('app'));
 
-// you can manipulate `counter`
 let counter = box.counter;
-setInterval(() => counter.up(), 1000);
+counter.go();
 
