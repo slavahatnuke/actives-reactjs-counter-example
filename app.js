@@ -12,7 +12,7 @@ class Counter {
     }
 
     go() {
-        setInterval(() => this.up(), 100);
+        setInterval(() => this.up(), 1000);
     }
 
     up() {
