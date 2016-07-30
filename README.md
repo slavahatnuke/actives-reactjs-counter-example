@@ -84,5 +84,5 @@ counter.go();
 ### Todos example
 It an example with todo list. Follow to get more ideas [example](https://github.com/slavahatnuke/react-native-todos-example)
 
-##### actives
+### actives
 The main idea of [actives](https://github.com/slavahatnuke/actives)
