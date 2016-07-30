@@ -1,6 +1,13 @@
 # actives
 There is an example with reactjs view.
 
+
+### How to start
+- `npm install`
+- `npm start`
+- `http://localhost:8080/` [http://localhost:8080/](http://localhost:8080/)
+
+
 There are some required packages.
 ```javascript
 import React from 'react';
@@ -69,11 +76,6 @@ You can manipulate `counter` (logic instance) now and it will present view
 let counter = box.counter;
 setInterval(() => counter.up(), 1000);
 ```
-
-### How to start
-- `npm install`
-- `npm start`
-- `http://localhost:8080/` [http://localhost:8080/](http://localhost:8080/)
 
 ### actives
 The main idea of [actives](https://github.com/slavahatnuke/actives)
