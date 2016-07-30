@@ -1,6 +1,5 @@
-# actives
+# ReactJS Actives counter example. 
 There is an example with reactjs view.
-
 
 ### How to start
 - `npm install`
@@ -19,9 +18,14 @@ import connect from 'actives-react';
 Pure logic and view.
 ```javascript
 // pure logic, it means that logic does not know about view
+// pure logic, it means that logic does not know about view
 class Counter {
     constructor() {
         this.counter = 0;
+    }
+
+    go() {
+        setInterval(() => this.up(), 1000);
     }
 
     up() {
@@ -41,9 +45,8 @@ let CounterView = ({counter, onUp}) => {
 
 Make box and define state.
 ```javascript
-// lets make state for counter
+// let's make state for counter
 let box = new Box;
-
 // add counter to the box
 box.add('counter', Counter);
 
@@ -61,20 +64,20 @@ box.connect('counterState', 'counter')
     });
 ```
 
-Connect state/actiions to the view and render.
+Connect state/actions to the view and render.
 ```javascript
 // connect state with view, view should not know about real logic
-let CounterWidget = connect(box.counterState)(CounterView);
+let CounterWidget = connect(box.counterState, CounterView);
 
-// render widget now it's connected to state and will react on changes.
+// render widget now it's connected to state. And it will react on changes.
 render(<CounterWidget />, document.getElementById('app'));
 ```
 
-You can manipulate `counter` (logic instance) now and it will present view
+You can manipulate `counter` (logic instance). And it will present view.
 ```javascript
-
+// lets GO!
 let counter = box.counter;
-setInterval(() => counter.up(), 1000);
+counter.go();
 ```
 
 ### actives

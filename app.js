@@ -8,7 +8,6 @@ import connect from 'actives-react';
 class Counter {
     constructor() {
         this.counter = 0;
-
     }
 
     go() {
@@ -49,11 +48,12 @@ box.connect('counterState', 'counter')
     });
 
 // connect state with view, view should not know about real logic
-let CounterWidget = connect(box.counterState)(CounterView);
+let CounterWidget = connect(box.counterState, CounterView);
 
-// render widget now it's connected to state and will react on changes.
+// render widget now it's connected to state. And it will react on changes.
 render(<CounterWidget />, document.getElementById('app'));
 
+// lets GO!
 let counter = box.counter;
 counter.go();
 
