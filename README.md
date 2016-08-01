@@ -84,4 +84,4 @@ counter.go();
 It's an example with todo list. Follow to get more ideas [example](https://github.com/slavahatnuke/actives-reactjs-todos-example)
 
 ### actives
-The main idea of [actives](https://github.com/slavahatnuke/actives)
+The main idea of [actives](https://www.npmjs.com/package/actives)
